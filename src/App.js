@@ -10,8 +10,6 @@ function App() {
     <div className="App">
       <h1>{count}</h1>
       <div>
-        {/* Empty text node as first child */}
-        {null}
         <button onClick={() => dispatch(increment())}>increment</button>
         <button onClick={() => dispatch(decrement())}>decrement</button>
       </div>
