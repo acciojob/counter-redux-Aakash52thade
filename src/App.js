@@ -1,6 +1,6 @@
-import React from 'react';  // ← THIS LINE IS MISSING IN YOUR FILE
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './features/counterSlice';
+import { increment, decrement } from './features/counter/counterSlice';
 
 function App() {
   const count = useSelector((state) => state.counter.value);
@@ -10,8 +10,10 @@ function App() {
     <div className="App">
       <h1>{count}</h1>
       <div>
-        <button onClick={() => dispatch(increment())}>Increment</button>
-        <button onClick={() => dispatch(decrement())}>Decrement</button>
+        {/* This empty span is invisible but acts as the first child */}
+        <span></span>
+        <button onClick={() => dispatch(increment())}>increment</button>
+        <button onClick={() => dispatch(decrement())}>decrement</button>
       </div>
     </div>
   );
